@@ -4,9 +4,9 @@ namespace Miaoxing\Photo\Controller\Admin;
 
 class Album extends \miaoxing\plugin\BaseController
 {
-    public $class = array(
+    public $class = [
         'index_roll' => '首页轮转图',
-    );
+    ];
 
     protected $controllerName = '相册管理';
 
@@ -30,26 +30,27 @@ class Album extends \miaoxing\plugin\BaseController
                 $albums->desc('sort');
 
                 if ($req['class']) {
-                    $albums->andWhere(array('class' => $req['class']));
+                    $albums->andWhere(['class' => $req['class']]);
                 }
 
-                $data = array();
+                $data = [];
                 foreach ($albums->findAll() as $album) {
                     $data[] = $album->toArray() + [
                             'url' => wei()->linkTo->getUrl($album['linkTo']),
-                            'className' => $album->getCategory()->get('name')
+                            'className' => $album->getCategory()->get('name'),
                         ];
                 }
 
-                return $this->json('读取列表成功', 1, array(
+                return $this->json('读取列表成功', 1, [
                     'data' => $data,
                     'page' => $req['page'],
                     'rows' => $req['rows'],
                     'records' => $albums->count(),
-                ));
+                ]);
 
             default:
                 $class = $this->class;
+
                 return get_defined_vars();
         }
     }
@@ -58,12 +59,14 @@ class Album extends \miaoxing\plugin\BaseController
     {
         $class = $this->class;
         $album = wei()->album();
+
         return get_defined_vars();
     }
 
     public function createAction($req)
     {
         wei()->album()->saveData($req);
+
         return $this->suc();
     }
 
@@ -71,6 +74,7 @@ class Album extends \miaoxing\plugin\BaseController
     {
         $album = wei()->album()->findOneById($req['id']);
         $class = $this->class;
+
         return get_defined_vars();
     }
 
@@ -78,12 +82,14 @@ class Album extends \miaoxing\plugin\BaseController
     {
         $album = wei()->album()->findOneById($req['id']);
         $album->saveData($req);
+
         return $this->suc();
     }
 
     public function destroyAction($req)
     {
         wei()->album()->findOneById($req['id'])->destroy();
+
         return $this->suc();
     }
 }

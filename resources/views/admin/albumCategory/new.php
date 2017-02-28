@@ -1,1 +1,3 @@
-<?php require $view->getFile('album:admin/albumCategory/edit.php');
+<?php
+
+require $view->getFile('album:admin/albumCategory/edit.php');

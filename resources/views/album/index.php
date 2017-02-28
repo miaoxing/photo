@@ -63,5 +63,5 @@
   'comps/TouchNSwipe/modernizr.min.js',
   'comps/TouchNSwipe/jquery.hammer.min.js',
   'comps/TouchNSwipe/TweenMax.min.js',
-  'comps/TouchNSwipe/TouchNSwipe.js'
+  'comps/TouchNSwipe/TouchNSwipe.js',
 ]) ?>"></script>
