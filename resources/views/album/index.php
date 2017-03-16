@@ -5,7 +5,7 @@
   'assets/buttonsRow.css',
   'assets/apps/album.css',
   'comps/TouchNSwipe/css/touchnswipe.min.css',
-  'comps/TouchNSwipe/css/fullscreen_popup.css'
+  'comps/TouchNSwipe/css/fullscreen_popup.css',
 ]) ?>"/>
 <?= $block->end() ?>
 
