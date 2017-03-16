@@ -1,11 +1,8 @@
 <?php $view->layout() ?>
 
-<style type="text/css">
-  .album-img {
-    max-height: 100px;
-    float: left
-  }
-</style>
+<?= $block('css') ?>
+<link rel="stylesheet" href="<?= $asset('plugins/phote/public/css/admin/photo.css') ?>"/>
+<?= $block->end() ?>
 
 <div class="page-header">
   <div class="pull-right">
@@ -63,7 +60,8 @@
 <?= $block('js') ?>
 <script>
   require(['linkTo', 'form', 'dataTable', 'jquery-deparam'], function (linkTo, form) {
-    form.toOptions($('#class'), <?= json_encode(wei()->category()->notDeleted()->withParent('photo')->getTreeToArray()) ?>, 'id', 'name');
+    var photoJson = <?= json_encode(wei()->category()->notDeleted()->withParent('photo')->getTreeToArray()) ?>;
+    form.toOptions($('#class'), photoJson, 'id', 'name');
 
     var recordTable = $('#album-table').dataTable({
       ajax: {
@@ -85,7 +83,7 @@
         {
           data: 'enable',
           render: function (data, type, full) {
-            if(data == 1) {
+            if (data == 1) {
               return '显示';
             }
             return '不显示';
@@ -129,14 +127,11 @@
 <?= $block->end() ?>
 <script id="table-actions" type="text/html">
   <div class="action-buttons">
-    <a href="<?= $url('admin/album/edit') ?>?id=<%= id %>"
-       title="编辑">
+    <a href="<?= $url('admin/album/edit') ?>?id=<%= id %>" title="编辑">
       <i class="fa fa-edit bigger-130"></i>
     </a>
-    <a class="text-danger delete-record"
-       data-href="<?= $url('admin/album/destroy') ?>?id=<%= id %>"
-       href="javascript:;"
-       title="删除">
+    <a class="text-danger delete-record" data-href="<?= $url('admin/album/destroy') ?>?id=<%= id %>" href="javascript:"
+      title="删除">
       <i class="fa fa-trash-o bigger-130"></i>
     </a>
   </div>

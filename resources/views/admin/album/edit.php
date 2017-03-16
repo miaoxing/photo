@@ -110,7 +110,7 @@
             提交
           </button>
           &nbsp; &nbsp; &nbsp;
-          <a class="btn btn-default" href="<?= $url('admin/album/index', $_GET) ?>">
+          <a class="btn btn-default" href="<?= $url('admin/album/index', $req->getQueries()) ?>">
             <i class="fa fa-undo bigger-110"></i>
             返回列表
           </a>
@@ -125,7 +125,8 @@
 <?= $block('js') ?>
 <script>
   require(['linkTo', 'form', 'ueditor', 'jquery-deparam'], function (linkTo, form) {
-    form.toOptions($('#class'), <?= json_encode(wei()->category()->notDeleted()->withParent('photo')->getTreeToArray()) ?>, 'id', 'name');
+    var photoJson = <?= json_encode(wei()->category()->notDeleted()->withParent('photo')->getTreeToArray()) ?>;
+    form.toOptions($('#class'), photoJson, 'id', 'name');
 
     var album = <?= $album->toJson() ?>;
 

@@ -4,7 +4,7 @@ namespace Miaoxing\Photo\Controller\Admin;
 
 class Album extends \miaoxing\plugin\BaseController
 {
-    public $class = [
+    protected $class = [
         'index_roll' => '首页轮转图',
     ];
 

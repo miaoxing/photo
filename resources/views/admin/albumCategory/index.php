@@ -31,8 +31,8 @@
         <tr>
           <th>名称</th>
           <th>简介</th>
-          <th style="width: 120px">顺序</th>
-          <th style="width: 120px">操作</th>
+          <th class="t-8">顺序</th>
+          <th class="t-12">操作</th>
         </tr>
         </thead>
         <tbody>
@@ -52,9 +52,10 @@
       <i class="fa fa-edit bigger-130"></i>
     </a>
     <% if(canDelete == 1) { %>
-      <a class="text-danger delete-record" href="javascript:;" data-href="<%= $.url('admin/albumCategory/destroy', {id: id}) %>" title="删除">
-        <i class="fa fa-trash-o bigger-130"></i>
-      </a>
+    <a class="text-danger delete-record" href="javascript:"
+      data-href="<%= $.url('admin/albumCategory/destroy', {id: id}) %>" title="删除">
+      <i class="fa fa-trash-o bigger-130"></i>
+    </a>
     <% } %>
   </div>
 </script>

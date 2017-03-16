@@ -14,7 +14,10 @@ class Album extends \miaoxing\plugin\BaseController
             ->desc('sort')
             ->findAll();
 
-        $currCategory = $req['categoryId'] ? wei()->category()->notDeleted()->findOneById($req['categoryId']) : $categories[0];
+        $currCategory = $categories[0];
+        if ($req['categoryId']) {
+            $currCategory = wei()->category()->notDeleted()->findOneById($req['categoryId']);
+        }
 
         $albums = wei()->album()->byClass($currCategory['id'])->findAll();
 

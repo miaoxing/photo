@@ -17,12 +17,12 @@
     <form id="category-form" class="form-horizontal" method="post" role="form">
 
       <div class="form-group">
-        <label class="col-lg-2 control-label" for="parentId">
+        <label class="col-lg-2 control-label" for="parent-id">
           所属专辑
         </label>
 
         <div class="col-lg-4">
-          <select name="parentId" id="parentId" class="form-control">
+          <select name="parentId" id="parent-id" class="form-control">
             <option value="photo">根专辑</option>
 
           </select>
@@ -101,10 +101,12 @@
 <?= $block('js') ?>
 <script>
   require(['form', 'ueditor', 'jquery-deparam', 'dataTable', 'validator'], function (form) {
-    form.toOptions($('#parentId'), <?= json_encode(wei()->category()->notDeleted()->withParent('photo')->getTreeToArray()) ?>, 'id', 'name');
+    var photoJson = <?= json_encode(wei()->category()->notDeleted()->withParent('photo')->getTreeToArray()) ?>;
+    form.toOptions($('#parent-id'), photoJson, 'id', 'name');
 
     <?php if ($plugin->isInstalled('mall')) : ?>
-      form.toOptions($('#binding'), <?= json_encode(wei()->category()->notDeleted()->withParent('mall')->getTreeToArray()) ?>, 'id', 'name');
+    var mallJson = <?= json_encode(wei()->category()->notDeleted()->withParent('mall')->getTreeToArray()) ?>;
+      form.toOptions($('#binding'), mallJson, 'id', 'name');
     <?php endif ?>
 
     var category = <?= $category->toJson() ?>;
