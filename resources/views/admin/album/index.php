@@ -35,8 +35,8 @@
       <table id="album-table" class="table-center table table-bordered table-hover">
         <thead>
         <tr>
-          <th>专辑</th>
-          <th>图片</th>
+          <th class="t-12">专辑</th>
+          <th class="t-12">图片</th>
           <th>描述</th>
           <th>状态</th>
           <th>链接</th>
