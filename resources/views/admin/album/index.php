@@ -1,7 +1,7 @@
 <?php $view->layout() ?>
 
 <?= $block('css') ?>
-<link rel="stylesheet" href="<?= $asset('plugins/photo/public/css/admin/photo.css') ?>"/>
+<link rel="stylesheet" href="<?= $asset('plugins/photo/css/admin/photo.css') ?>"/>
 <?= $block->end() ?>
 
 <div class="page-header">
