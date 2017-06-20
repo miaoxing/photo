@@ -33,6 +33,10 @@ class Album extends \miaoxing\plugin\BaseController
                     $albums->andWhere(['class' => $req['class']]);
                 }
 
+                if (wei()->isPresent($req['enable'])) {
+                    $albums->andWhere(['enable' => $req['enable']]);
+                }
+
                 $data = [];
                 foreach ($albums->findAll() as $album) {
                     $data[] = $album->toArray() + [

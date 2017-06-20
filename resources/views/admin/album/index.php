@@ -30,6 +30,14 @@
               <option value="">全部专辑</option>
             </select>
           </div>
+
+          <div class="form-group">
+            <select id="enable" name="enable">
+              <option value="">全部状态</option>
+              <option value="1">显示</option>
+              <option value="0">不显示</option>
+            </select>
+          </div>
         </form>
       </div>
       <table id="album-table" class="table-center table table-bordered table-hover">
