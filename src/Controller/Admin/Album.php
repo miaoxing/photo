@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Photo\Controller\Admin;
 
-class Album extends \miaoxing\plugin\BaseController
+class Album extends \Miaoxing\Plugin\BaseController
 {
     protected $class = [
         'index_roll' => '首页轮转图',

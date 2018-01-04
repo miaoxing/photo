@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Photo\Controller;
 
-class Album extends \miaoxing\plugin\BaseController
+class Album extends \Miaoxing\Plugin\BaseController
 {
     protected $guestPages = ['album'];
 
