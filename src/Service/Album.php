@@ -3,7 +3,7 @@
 namespace Miaoxing\Photo\Service;
 
 use Miaoxing\Category\Service\Category;
-use miaoxing\plugin\BaseModel;
+use Miaoxing\Plugin\BaseModel;
 
 /**
  * @property \Miaoxing\LinkTo\Service\LinkTo $linkTo
