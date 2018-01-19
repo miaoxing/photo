@@ -104,7 +104,7 @@
     var photoJson = <?= json_encode(wei()->category()->notDeleted()->withParent('photo')->getTreeToArray()) ?>;
     form.toOptions($('#parent-id'), photoJson, 'id', 'name');
 
-    <?php if ($plugin->isInstalled('mall')) : ?>
+    <?php if ($wei->plugin->isInstalled('mall')) : ?>
     var mallJson = <?= json_encode(wei()->category()->notDeleted()->withParent('mall')->getTreeToArray()) ?>;
       form.toOptions($('#binding'), mallJson, 'id', 'name');
     <?php endif ?>
