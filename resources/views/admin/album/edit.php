@@ -34,15 +34,7 @@
         </label>
 
         <div class="col-lg-4">
-          <div class="input-group">
-            <input type="text" class="form-control" id="image" name="image">
-                        <span class="input-group-btn">
-                            <button id="select-thumb" class="btn btn-white" type="button">
-                              <i class="fa fa-picture-o"></i>
-                              选择图片
-                            </button>
-                        </span>
-          </div>
+          <input type="text" class="form-control" id="image" name="image">
         </div>
 
         <label class="col-lg-6 help-text" for="image">
@@ -124,7 +116,7 @@
 
 <?= $block->js() ?>
 <script>
-  require(['linkTo', 'form', 'ueditor', 'jquery-deparam'], function (linkTo, form) {
+  require(['linkTo', 'form', 'ueditor', 'jquery-deparam', 'plugins/admin/js/image-upload'], function (linkTo, form) {
     var photoJson = <?= json_encode(wei()->category()->notDeleted()->withParent('photo')->getTreeToArray()) ?>;
     form.toOptions($('#class'), photoJson, 'id', 'name');
 
@@ -156,7 +148,7 @@
     });
 
     // 点击选择图片
-    $('#image').imageInput();
+    $('#image').imageUpload();
   });
 </script>
 <?php $block->end() ?>
