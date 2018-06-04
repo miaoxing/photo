@@ -26,18 +26,4 @@ class Album extends \Miaoxing\Plugin\BaseController
 
         return get_defined_vars();
     }
-
-    public function testAction()
-    {
-        var_dump(wei()->tencentyunCosV5->signUrl('a.txt'));
-
-        die;
-
-
-        // 接着
-        wei()->file->setOption('driver', 'tencentyunCosV5');
-
-        $ret = wei()->file->upload('upload/card_intro_big29bc6c.jpg');
-        var_dump($ret);die;
-    }
 }
