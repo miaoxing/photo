@@ -4,20 +4,10 @@
 <link rel="stylesheet" href="<?= $asset('plugins/photo/css/admin/photo.css') ?>"/>
 <?= $block->end() ?>
 
-<div class="page-header">
-  <div class="pull-right">
-    <a class="btn btn-success" href="<?= $url('admin/album/new') ?>">添加相片</a>
-    <a class="btn btn-success" href="<?= $url('admin/albumCategory/index') ?>">管理相册专辑</a>
-  </div>
-  <h1>
-    微官网
-    <small>
-      <i class="fa fa-angle-double-right"></i>
-      相册管理
-    </small>
-  </h1>
-</div>
-<!-- /.page-header -->
+<?= $block('header-actions') ?>
+<a class="btn btn-success" href="<?= $url('admin/album/new') ?>">添加相片</a>
+<a class="btn btn-success" href="<?= $url('admin/albumCategory/index') ?>">管理相册专辑</a>
+<?= $block->end() ?>
 
 <div class="row">
   <div class="col-xs-12">

@@ -17,6 +17,8 @@ class Album extends \Miaoxing\Plugin\BaseController
         'destroy' => '删除',
     ];
 
+    protected $displayPageHeader = true;
+
     public function indexAction($req)
     {
         switch ($req['_format']) {
