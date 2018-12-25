@@ -30,14 +30,14 @@
           </div>
         </form>
       </div>
-      <table id="album-table" class="table-center table table-bordered table-hover">
+      <table id="album-table" class="table-center record-table table table-bordered table-hover">
         <thead>
         <tr>
           <th class="t-12">专辑</th>
           <th class="t-12">图片</th>
           <th>描述</th>
           <th>状态</th>
-          <th>链接</th>
+          <th class="t-12">链接</th>
           <th>顺序</th>
           <th>操作</th>
         </tr>
