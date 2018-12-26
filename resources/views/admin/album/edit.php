@@ -27,7 +27,7 @@
         </div>
 
         <label class="col-lg-6 help-text" for="image">
-          推荐宽度为640像素,高度不限,所有图片保持一致高度即可
+          推荐宽度为750像素,高度不限,所有图片保持一致高度即可
         </label>
       </div>
 
