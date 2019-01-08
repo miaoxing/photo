@@ -72,7 +72,7 @@
         {
           data: 'image',
           render: function (data, type, full) {
-            return '<img class="album-img" src="' + data + '" />';
+            return '<img class="album-img img-responsive" src="' + data + '" />';
           }
         },
         {
