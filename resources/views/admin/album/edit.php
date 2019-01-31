@@ -131,8 +131,7 @@
       $el: $('#link-to'),
       data: album.linkTo,
       hide: {
-        keyword: true,
-        decorator: true
+        keyword: true
       }
     });
 
