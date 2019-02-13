@@ -13,7 +13,7 @@
   <div class="col-12">
     <!-- PAGE CONTENT BEGINS -->
     <div class="table-responsive">
-      <div class="well form-well">
+      <div class="well">
         <form class="form-inline" id="search-form" role="form">
           <div class="form-group">
             <select id="class" name="class">
