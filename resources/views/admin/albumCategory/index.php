@@ -62,7 +62,7 @@
 
 <?= $block->js() ?>
 <script>
-  require(['assets/apps/admin/category', 'dataTable', 'form', 'jquery-deparam'], function (category) {
+  require(['assets/apps/admin/category', 'plugins/admin/js/data-table', 'form', 'jquery-deparam'], function (category) {
     var recordTable = $('#category-table').dataTable({
       ajax: {
         url: $.url('admin/albumCategory.json', {parentId: 'photo'})

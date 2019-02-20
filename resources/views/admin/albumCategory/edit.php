@@ -100,7 +100,7 @@
 
 <?= $block->js() ?>
 <script>
-  require(['form', 'ueditor', 'jquery-deparam', 'dataTable', 'validator'], function (form) {
+  require(['form', 'ueditor', 'jquery-deparam', 'plugins/admin/js/data-table', 'validator'], function (form) {
     var photoJson = <?= json_encode(wei()->category()->notDeleted()->withParent('photo')->getTreeToArray()) ?>;
     form.toOptions($('#parent-id'), photoJson, 'id', 'name');
 

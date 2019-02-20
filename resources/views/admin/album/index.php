@@ -57,7 +57,7 @@
 
 <?= $block->js() ?>
 <script>
-  require(['linkTo', 'form', 'dataTable', 'jquery-deparam'], function (linkTo, form) {
+  require(['linkTo', 'form', 'plugins/admin/js/data-table', 'jquery-deparam'], function (linkTo, form) {
     var photoJson = <?= json_encode(wei()->category()->notDeleted()->withParent('photo')->getTreeToArray()) ?>;
     form.toOptions($('#class'), photoJson, 'id', 'name');
 
