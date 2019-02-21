@@ -4,8 +4,7 @@ $view->layout();
 ?>
 
 <?= $block->css() ?>
-<link rel="stylesheet" href="<?= $asset('assets/buttonsRow.css') ?>"/>
-<link rel="stylesheet" href="<?= $asset('assets/apps/album.css') ?>"/>
+<link rel="stylesheet" href="<?= $asset('plugins/photo/css/photos.css') ?>"/>
 <link rel="stylesheet" href="<?= $asset('comps/TouchNSwipe/css/touchnswipe.min.css') ?>"/>
 <link rel="stylesheet" href="<?= $asset('comps/TouchNSwipe/css/fullscreen_popup.css') ?>"/>
 <?= $block->end() ?>

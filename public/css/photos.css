@@ -1,0 +1,86 @@
+.album-buttons-row {
+  padding: 10px
+}
+
+#album-list {
+  margin: 0;
+  padding: 0;
+}
+
+#album-list li {
+  border: 1px solid #ddd;
+  padding: 4px;
+  margin: 5px;
+  width: 140px;
+  display: inline-block;
+}
+
+#album-list li img {
+  width: 100%;
+}
+
+
+/* Button group */
+.buttons-row .button.active {
+  background: #007aff;
+  color: #fff;
+}
+
+.buttons-row .button {
+  border: 1px solid #007aff;
+  color: #007aff;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
+  line-height: 27px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  padding: 0 10px;
+  margin: 0;
+  height: 29px;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.buttons-row {
+  -webkit-align-self: center;
+  align-self: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.buttons-row a {
+  font-weight: normal;
+  text-shadow: none;
+}
+
+.buttons-row .button:first-child {
+  border-radius: 5px 0 0 5px;
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+
+.buttons-row .button:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.buttons-row .button {
+  border-radius: 0;
+  border-left-width: 0;
+  width: 100%;
+  -webkit-box-flex: 1;
+}
