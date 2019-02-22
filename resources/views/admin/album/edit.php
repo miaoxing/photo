@@ -105,7 +105,7 @@
 
 <?= $block->js() ?>
 <script>
-  require(['plugins/link-to/js/link-to', 'form', 'ueditor', 'jquery-unparam', 'plugins/admin/js/image-upload'], function (linkTo, form) {
+  require(['plugins/link-to/js/link-to', 'form', 'ueditor', 'plugins/admin/js/image-upload'], function (linkTo, form) {
     var photoJson = <?= json_encode(wei()->category()->notDeleted()->withParent('photo')->getTreeToArray()) ?>;
     form.toOptions($('#class'), photoJson, 'id', 'name');
 
