@@ -109,7 +109,11 @@
 
     recordTable.on('click', '.delete-record', function () {
       var $this = $(this);
-      $.confirm('删除后将无法还原,确认删除?', function () {
+      $.confirm('删除后将无法还原,确认删除?', function (result) {
+        if (!result) {
+          return;
+        }
+
         $.post($this.data('href'), function (result) {
           $.msg(result);
           recordTable.reload();
