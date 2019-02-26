@@ -3,7 +3,7 @@
 <div class="page-header">
   <div class="float-right">
     <a class="btn btn-success" href="<?= $url('admin/albumCategory/new') ?>">添加专辑</a>
-    <a class="btn btn-default" href="<?= $url('admin/album/index') ?>">返回相册列表</a>
+    <a class="btn btn-secondary" href="<?= $url('admin/album/index') ?>">返回相册列表</a>
   </div>
   <h1>
     微官网
