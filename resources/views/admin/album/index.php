@@ -6,7 +6,7 @@
 
 <?= $block('header-actions') ?>
 <a class="btn btn-success" href="<?= $url('admin/album/new') ?>">添加相片</a>
-<a class="btn btn-success" href="<?= $url('admin/albumCategory/index') ?>">管理相册专辑</a>
+<a class="btn btn-secondary" href="<?= $url('admin/albumCategory/index') ?>">管理相册专辑</a>
 <?= $block->end() ?>
 
 <div class="row">
@@ -16,13 +16,13 @@
       <div class="well">
         <form class="form-inline" id="search-form" role="form">
           <div class="form-group">
-            <select id="class" name="class">
+            <select id="class" name="class" class="form-control">
               <option value="">全部专辑</option>
             </select>
           </div>
 
           <div class="form-group">
-            <select id="enable" name="enable">
+            <select id="enable" name="enable" class="form-control">
               <option value="">全部状态</option>
               <option value="1">显示</option>
               <option value="0">不显示</option>
